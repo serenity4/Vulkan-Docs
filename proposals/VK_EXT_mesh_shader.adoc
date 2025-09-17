@@ -8,7 +8,7 @@
 :extensions: {docs}appendices/extensions.html#
 :spec: https://www.khronos.org/registry/vulkan/specs/latest/html/vkspec.html
 :sectnums:
-:stem:
+:stem: asciimath
 
 This extension provides a new mechanism allowing applications to generate collections of geometric primitives via programmable mesh shading.
 
