@@ -165,7 +165,7 @@ class VulkanConventions(ConventionsBase):
     @property
     def write_contacts(self):
         """Return whether contact list should be written to extension appendices"""
-        return True
+        return False
 
     @property
     def write_refpage_include(self):
@@ -327,4 +327,3 @@ class VulkanBaseConventions(VulkanConventions):
     def xml_api_name(self):
         """Return the name used in the default API XML registry for the default API"""
         return 'vulkanbase'
-

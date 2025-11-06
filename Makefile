@@ -369,6 +369,11 @@ $(HTMLDIR)/vkspec.html: $(SPECSRC) $(COMMONDOCS) $(KATEXINSTDIR)
 	$(QUIET)$(ASCIIDOC) -b html5 $(ADOCOPTS) $(ADOCHTMLOPTS) -o $@ $(SPECSRC)
 	$(QUIET)$(TRANSLATEMATH) $@
 
+docbook: vkspec.xml $(SPECSRC) $(COMMONDOCS)
+vkspec.xml: KATEXDIR = ../kate
+vkspec.xml: $(SPECSRC) $(COMMONDOCS) $(KATEXINSTDIR)
+	$(QUIET)$(ASCIIDOC) -b docbook $(ADOCOPTS) -o $@ $(SPECSRC)
+
 diff_html: $(HTMLDIR)/diff.html $(SPECSRC) $(COMMONDOCS)
 
 $(HTMLDIR)/diff.html: KATEXDIR = ../katex
